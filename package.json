@@ -1,6 +1,6 @@
 {
   "name": "mcp-server-gemini",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "description": "State-of-the-art MCP server for Google Gemini API with all latest features",
   "main": "dist/enhanced-stdio-server.js",
   "bin": {
@@ -11,14 +11,15 @@
     "prepare": "npm run build",
     "start": "node dist/enhanced-stdio-server.js",
     "dev": "ts-node src/enhanced-stdio-server.ts",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "npm run build && node --test tests/current.test.mjs",
+    "test:watch": "node --test --watch tests/current.test.mjs",
     "lint": "eslint src/**/*.ts",
-    "format": "prettier --write src/**/*.ts"
+    "format": "prettier --write src/**/*.ts",
+    "test:legacy": "jest --config jest.config.js"
   },
   "type": "module",
   "dependencies": {
-    "@google/genai": "^1.8.0"
+    "@google/genai": "2.24.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -47,14 +48,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliargun/mcp-server-gemini.git"
+    "url": "git+https://github.com/haohanw/mcp-server-gemini.git"
   },
   "bugs": {
-    "url": "https://github.com/aliargun/mcp-server-gemini/issues"
+    "url": "https://github.com/haohanw/mcp-server-gemini/issues"
   },
-  "homepage": "https://github.com/aliargun/mcp-server-gemini#readme",
+  "homepage": "https://github.com/haohanw/mcp-server-gemini#readme",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   },
   "files": [
     "dist",

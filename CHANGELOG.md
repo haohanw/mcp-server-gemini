@@ -1,3 +1,10 @@
+## 4.3.0 (maintained fork, 2026-09-28)
+
+- Default to Gemini 3.8 Flash and Gemini Embedding 2; document optional Gemini 3.1 Pro Preview. Discover models live without frozen enums.
+- Update Google GenAI SDK, fix config forwarding and conversation history, return grounding/URL provenance, and support actual inline multimodal input.
+- Reject pretend image URL analysis; redact tool errors and validate empty results.
+- Add current stdio regression tests, CI, portable Codex role, live smoke script, and an explicit verification record including billing/network blockers.
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
